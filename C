@@ -1,0 +1,253 @@
+#include <stdio.h>
+
+                        /*  VK 2, T.5 Tehty siistimmin - Tee C-kielinen ohjelma, joka kysyy opiskelijan IDnumeron, nimen ja kolmen
+                            osasuorituksen pistemäärän (0-100), sekä laskee niistä keskiarvon. Ohjelma
+                            tulostaa tekstin, Kiitettävä, Hyvä, Välttävä, Hylätty -tekstin sen mukaan mikä
+                            kolmen osasuorituksen keskiarvo on eli
+                            jos keskiarvo on suurempi tai yhtä suuri kuin 80, tulostuu arvosanatekstiksi
+                            Kiitettävä,
+                            jos taas keskiarvo on välillä 79-60, tulostuu arvosanatekstiksi Hyvä,
+                            jos keskiarvo on välillä 59-40, tulostuu arvosanatekstiksi Välttävä,
+                            jos keskiarvo on alle 40, tulostuu tekstiksi Hylätty. */
+/* int main()
+ * {
+
+    printf(" IDnumero :\n Opiskelijan nimi :\n Osasuoritus1 : \n Osasuoritus2 : \n Osasuoritus3 : \n");
+
+    int IDnumero ;
+    char OpNimi[20];
+    int OsaSuoritus1 ;
+    int OsaSuoritus2 ;
+    int OsaSuoritus3 ;
+
+    int PisteetYhteensa ;
+    float KeskiArvo ;
+
+    scanf("%d %s %d %d %d", &IDnumero, &OpNimi, &OsaSuoritus1, &OsaSuoritus2, &OsaSuoritus3);
+
+    PisteetYhteensa = OsaSuoritus1+OsaSuoritus2+OsaSuoritus3;
+    KeskiArvo = PisteetYhteensa / 3;
+
+    printf("IDnumero :%d\n Opiskelijan nimi :%s\n Osasuoritus1 :%d \n Osasuoritus2 :%d \n Osasuoritus3 :%d \n Pisteet yhteensa = %d."
+                            " Pisteiden keskiarvo on %.2f. Suoritus on arvosanaltaan Kiitettava \n"
+                            ,IDnumero, OpNimi, OsaSuoritus1, OsaSuoritus2, OsaSuoritus3 , PisteetYhteensa, KeskiArvo);
+
+    if (KeskiArvo >= 80){
+        printf("Suoritus on arvosanaltaan Kiitettava \n");
+        }
+        else if (KeskiArvo >= 60 && KeskiArvo <=79 ){
+               printf("Suoritus on arvosanaltaan Hyva \n");
+        }
+        else if(KeskiArvo >= 40 && KeskiArvo <= 59) {
+            printf("Suoritus on arvosanaltaan Valttava \n");
+        }
+        else if (KeskiArvo < 40){
+               printf("Suoritus on arvosanaltaan hylatty \n");
+        }
+        else
+        printf("Tarkista osasuoritus pisteiden maara");
+
+        return 0;
+   }
+   */
+
+                        //Oma hassuttelu
+
+/*  int main()
+    {
+
+    char olut;
+    printf("otatko Oluen yes='y' ja no='n'? \n");
+    scanf("%s", &olut);
+
+    if (olut == 'y')
+        printf("Mahti homma, ainahan yhen ehtii juomaan! \n");
+     else if (olut == 'n')
+        printf("okei, no tossa on viski..\n ");
+    return 0;
+    } */
+
+                             /* VK2 T.5 - Tee C-kielinen ohjelma, joka kysyy opiskelijan IDnumeron, nimen ja kolmen
+                                osasuorituksen pistemäärän (0-100), sekä laskee niistä keskiarvon. Ohjelma
+                                tulostaa tekstin, Kiitettävä, Hyvä, Välttävä, Hylätty -tekstin sen mukaan mikä
+                                kolmen osasuorituksen keskiarvo on eli
+                                jos keskiarvo on suurempi tai yhtä suuri kuin 80, tulostuu arvosanatekstiksi
+                                Kiitettävä,
+                                jos taas keskiarvo on välillä 79-60, tulostuu arvosanatekstiksi Hyvä,
+                                jos keskiarvo on välillä 59-40, tulostuu arvosanatekstiksi Välttävä,
+                                jos keskiarvo on alle 40, tulostuu tekstiksi Hylätty. */
+
+/*  int main()
+    {
+
+    printf(" IDnumero :\n Opiskelijan nimi :\n Osasuoritus1 : \n Osasuoritus2 : \n Osasuoritus3 : \n");
+
+    int IDnumero ;
+    char OpNimi[20];
+    int OsaSuoritus1 ;
+    int OsaSuoritus2 ;
+    int OsaSuoritus3 ;
+
+    int PisteetYhteensa ;
+    float KeskiArvo ;
+
+    scanf("%d %s %d %d %d", &IDnumero, &OpNimi, &OsaSuoritus1, &OsaSuoritus2, &OsaSuoritus3);
+
+    PisteetYhteensa = OsaSuoritus1+OsaSuoritus2+OsaSuoritus3;
+    KeskiArvo = PisteetYhteensa / 3;
+
+    if (KeskiArvo >= 80)
+        printf("IDnumero :%d\n Opiskelijan nimi :%s\n Osasuoritus1 :%d \n Osasuoritus2 :%d \n Osasuoritus3 :%d \n Pisteet yhteensa = %d."
+                                " Pisteiden keskiarvo on %.2f. Suoritus on arvosanaltaan Kiitettava \n"
+                                ,IDnumero, OpNimi, OsaSuoritus1, OsaSuoritus2, OsaSuoritus3 , PisteetYhteensa, KeskiArvo);
+
+        else if (KeskiArvo >= 60 && KeskiArvo <=79 ) printf("IDnumero :%d\n Opiskelijan nimi :%s\n Osasuoritus1 :%d \n Osasuoritus2 :%d \n Osasuoritus3 :%d \n Pisteet yhteensa = %d."
+                                                " Pisteiden keskiarvo on %.2f. Suoritus on arvosanaltaan Hyva \n"
+                                                            ,IDnumero, OpNimi, OsaSuoritus1, OsaSuoritus2, OsaSuoritus3 , PisteetYhteensa, KeskiArvo);
+
+        else if(KeskiArvo >= 40 && KeskiArvo <= 59) printf("IDnumero :%d\n Opiskelijan nimi :%s\n Osasuoritus1 :%d \n Osasuoritus2 :%d \n Osasuoritus3 :%d \n Pisteet yhteensa = %d."
+                                                 " Pisteiden keskiarvo on %.2f. Suoritus on arvosanaltaan Valttava \n"
+                                                           ,IDnumero, OpNimi, OsaSuoritus1, OsaSuoritus2, OsaSuoritus3 , PisteetYhteensa, KeskiArvo);
+
+             else if (KeskiArvo < 40) printf("IDnumero :%d\n Opiskelijan nimi :%s\n Osasuoritus1 :%d \n Osasuoritus2 :%d \n Osasuoritus3 :%d \n Pisteet yhteensa = %d."
+                                                 " Pisteiden keskiarvo on %.2f. Suoritus on arvosanaltaan hylatty \n"
+                                                           ,IDnumero, OpNimi, OsaSuoritus1, OsaSuoritus2, OsaSuoritus3 , PisteetYhteensa, KeskiArvo);
+     else
+        printf("Tarkista osasuoritus pisteiden maara");
+
+    return 0;
+    } */
+
+
+                    /*VK2 t.4 - Tee C-kielinen ohjelma, joka kysyy käyttäjältä kuukauden ostosten euromäärän.
+                    Jos ostosten yhteissumma on alle 100€, saat alennusta ostoista 10%
+                    Jos ostosten yhteissumma on alle 300€, saat alennusta 15%
+                    Jos ostosten yhteissumma on alle 500€, saat alennusta 20%,
+                    muussa tapauksessa alennus on 25%.
+                    Laske ja tulosta ostosten lopullinen summa. */
+
+
+ /* int main()
+    {
+    printf("Insert your TOTAL monthly shopping expenses, please \n");
+
+    float ostokset ;
+
+    scanf("%f", &ostokset);
+    float summa = ostokset * 0.90;
+    float summa1 = ostokset * 0.85;
+    float summa2 = ostokset * 0.80;
+    float summa3 = ostokset * 0.75;
+
+    if (ostokset < 100){
+        printf("Olet ostanut tassa kuussa %.2f eurolla. ja saat niista alennusta 10 prosenttia. Ostosten lopullinen summa on %.2f  \n", ostokset, summa);
+    } else if (ostokset >=100 && ostokset <300) {
+        printf("Olet ostanut tassa kuussa %.2f eurolla. ja saat niista alennusta 15 prosenttia. Ostosten lopullinen summa on %.2f \n", ostokset, summa1);
+    } else if (ostokset >=300 && ostokset <500) {
+        printf("Olet ostanut tassa kuussa %.2f eurolla. Ja saat niista alennusta 20 prosenttia. Ostosten lopullinen summa on %.2f \n", ostokset, summa2);
+    } else {
+        printf("Olet ostanut tassa kuussa %.2f eurolla. Ja saat niista alennusta 25 prosenttia. Ostosten lopullinen summa on %.2f \n", ostokset, summa3);
+    }
+     return 0;
+    } */
+
+                    /* VK2 t.4 puhtaampi? - 4. Tee C-kielinen ohjelma, joka kysyy käyttäjältä kuukauden ostosten euromäärän.
+                                                Jos ostosten yhteissumma on alle 100€, saat alennusta ostoista 10%
+                                                Jos ostosten yhteissumma on alle 300€, saat alennusta 15%
+                                                Jos ostosten yhteissumma on alle 500€, saat alennusta 20%,
+                                                muussa tapauksessa alennus on 25%.
+                                                Laske ja tulosta ostosten lopullinen summa. */
+
+/*    int main()
+    {
+    printf("Insert your TOTAL monthly shopping expenses, please \n");
+
+    float ostokset;
+    float ale;
+    int prosentti;
+
+    scanf("%f", &ostokset);
+
+    if (ostokset < 100){
+        ale = 0.90;
+        prosentti = 10;
+
+    } else if (ostokset>=100 && ostokset<300){
+        ale = 0.85;
+        prosentti = 15;
+    } else if (ostokset>=300 && ostokset < 500){
+        ale = 0.80;
+        prosentti = 20;
+    } else {
+        ale = 0.75;
+        prosentti = 25; }
+
+    float loppusumma = ostokset * ale;
+    printf("Olet ostanut tassa kuussa %.2f eurolla. Ja saat niista alennusta %d prosenttia. Ostosten lopullinen summa on %.2f \n", ostokset, prosentti, loppusumma);
+
+    return 0;
+    } */
+
+                    /* VK2 t.3 Tee C-kielinen ohjelma, joka kysyy käyttäjältä viikonpäivän numeron (1-7).
+                        Numeron antamisen mukaan ohjelma tulostaa viikonpäivän */
+
+/* int main()
+    {
+    printf("Anna viikonpaivan numero valilta 1-7! \n");
+
+    int nmr ;
+
+     scanf("%d", &nmr);
+
+     if (nmr == 1){
+         printf("Maanantai.. hmmm... it is going to be a good week!\n");
+     } else if (nmr == 2) {
+       printf("Tiistai\n");
+     } else if (nmr == 3) {
+       printf("Keskiviikko, ALRIGHT !! almost there \n");
+     } else if (nmr == 4) {
+       printf("Torstai\n");
+     } else if (nmr == 5) {
+       printf("Perjantai!!!!\n");
+     } else if (nmr == 6) {
+         printf("Lauantai!\n");
+     } else if (nmr == 7) {
+         printf("Sunnuntai\n");
+     } else {
+         printf("Annoit sellaisen numeron, jolle ei ole viikonpaivaa\n");
+     }
+    return 0;
+    } */
+
+                    /*VK2 t.2 Tee C-kielinen ohjelma, joka kysyy käyttäjältä kaksi lukua ja tulostaa niistä suuremman. */
+
+   /* int luku1 ;
+    int luku2 ;
+
+    printf("Anna kaksi lukua! \n");
+    scanf("%d" "%d", &luku1 &luku2);
+    if (luku1 > luku2){
+        printf("Annoit luvut %.2d ja %.2d, joista %.2d on suurempi! \n", luku1, luku2, luku1);
+    } else {
+            printf("Annoit luvut %.2d ja %.2d, joista %.2d on suurempi! \n", luku1, luku2, luku2);
+        }
+
+    return 0;
+    } */
+
+
+                    /*VK2 t.1 1. Tee c-kielinen ohjelma, joka kysyy käyttäjältä kokonaisluvun. Jos käyttäjän antama
+                      luku on pienempi kuin 10 saa käyttäjä ilmoituksen */
+/* int main()
+    {
+
+    int kokonaisluku ;
+
+     printf("Anna kokonaisluku!\n");
+    scanf("%d", &kokonaisluku);
+    if (kokonaisluku < 10){
+        printf("Annoit luvun, joka on pienempi kuin 10 \n");
+    }
+
+    return 0;
+    } */
